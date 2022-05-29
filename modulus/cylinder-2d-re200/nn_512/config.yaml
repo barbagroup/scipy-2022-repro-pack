@@ -1,0 +1,49 @@
+defaults :
+  - modulus_default
+  - arch: [fully_connected,]
+  - scheduler: tf_exponential_lr
+  - optimizer: adam
+  - loss: sum
+  - _self_
+
+jit: true
+
+save_filetypes: npz
+
+debug: false
+
+arch:
+  fully_connected:
+    layer_size: 512
+    nr_layers: 6
+
+scheduler:
+  decay_rate: 0.95
+  decay_steps: 10000
+
+training:
+  max_steps : 1000000
+  rec_results_freq : 1000
+  rec_inference_freq: 10000
+  save_network_freq: 1000
+  print_stats_freq: 100
+
+batch_size:
+  ic: 2048
+  npts: 40960
+  inlet: 8192
+  outlet: 8192
+  bottom: 8192
+  top: 8192
+  cylinder: 8192
+
+custom:
+  scale: 1
+  nu: 0.005
+  rho: 1.0
+  tend: 200.0
+  xbg: -8.0
+  xed: 25.0
+  ybg: -8.0
+  yed: 8.0
+  radius: 0.5

@@ -1,0 +1,38 @@
+defaults :
+  - modulus_default
+  - arch: [fully_connected,]
+  - scheduler: tf_exponential_lr
+  - optimizer: adam
+  - loss: sum
+  - _self_
+
+jit: true
+
+save_filetypes: npz
+
+debug: false
+
+arch:
+  fully_connected:
+    layer_size: 256
+    nr_layers: 6
+
+scheduler:
+  decay_rate: 0.95
+  decay_steps: 10000
+
+training:
+  max_steps : 1000000
+  rec_results_freq : 1000
+  rec_inference_freq: 10000
+  save_network_freq: 1000
+  print_stats_freq: 100
+
+batch_size:
+  npts: 18432
+
+custom:
+  scale: 1
+  nu: 0.01
+  rho: 1.0
+  tend: 100.0

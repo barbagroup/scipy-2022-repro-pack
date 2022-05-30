@@ -1,0 +1,6 @@
+# vim:ft=singularity
+Bootstrap: docker-daemon
+From: modulus:22.03
+
+%environment
+    export PS1="\[\033[31;1m\][Apptainer][\u@\h:\w]$ \[\033[0m\]"

@@ -26,7 +26,7 @@ pyplot.rcParams.update({
 
 # directories
 rootdir = pathlib.Path(__file__).resolve().parents[1]
-modulusdir = rootdir.joinpath("modulus", "cylinder-2d-re200")
+modulusdir = rootdir.joinpath("modulus", "cylinder-2d-re200-zero-ic")
 rootdir.joinpath("figures").mkdir(exist_ok=True)
 
 # read data

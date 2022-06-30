@@ -1,6 +1,9 @@
 Reproducibility package for SciPy 2022 proceeding submission
 ============================================================
 
+**Title**: "Experience report of physics-informed neural networks in fluid simulations: pitfalls and frustration"
+**Preprint on arXiv**: https://arxiv.org/abs/2205.14249
+
 Cases under folder `petibm` were run with the Singularity image created by `petibm-0.5.4rc2-hpcx207-cuda102.singularity` under `singularity` folder.
 Cases under folder `modulus` were run with the Singularity image created by `modulus-22.03.singularity` under `singularity` folder.
 However, Modulus is not an open-source software.

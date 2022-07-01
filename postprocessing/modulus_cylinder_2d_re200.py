@@ -249,6 +249,6 @@ if __name__ == "__main__":
     else:
         raise FileNotFoundError("Couldn't locate the path to the folder `cases`.")
 
-    root = root.joinpath("modulus", "cylinder-2d-re200")
+    root = root.joinpath("modulus", "cylinder-2d-re200-zero-ic")
 
     main(root)
